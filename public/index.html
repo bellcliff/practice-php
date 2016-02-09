@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>practice php</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet"
+    type="text/css">
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/angular-bootstrap/ui-bootstrap-csp.css">
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <style>
+        h3.myfont {
+            font-family: Lato;
+            font-size: 96px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body ng-app="main" ng-controller="PageCtrl">
+    <div class="container">
+        <table class="table table-stripped">
+            <tr ng-repeat="i in interviews">
+                <td>{{i.Client}}</td>
+                <td>{{i.Date}}</td>
+                <td>{{i.Candidate}}</td>
+                <td>{{i.Type}}</td>
+            </tr>
+        </table>
+        <uib-pagination total-items="totalItems" items-per-page="perPage" ng-model="currentPage" max-size="5"></uib-pagination>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
